@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  padding: 0;
+  margin:0;
+  box-sizing: border-box;
+  font-family: outfit;
+  scroll-behavior: smooth;
+}
+body{
+  min-height: 100vh;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.active{
+  padding-bottom: 2px;
+  border-bottom: 2px solid #49557e ;
+}
+.navbar li{
+  cursor: pointer;
+}
+.bg {
+  background: url("/header_img.png") no-repeat;
+  background-size: contain;
+  position: relative;
+}
+.menu-lst{
+ cursor: pointer;
+ border-radius : 50%; 
+ width: 7.5vw;
+ min-width: 80px;
+transition-duration: 0.2s;
+}
+.active1{
+  border: 2px solid tomato;
+  padding: 2px;
+}
+.grid-c{
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+}
+.grid-d{
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+}
