@@ -6,6 +6,7 @@ const FoodItem = ({name,price,description,image}) => {
   const {cartitems,addtocart,removefromcart}= useContext(StoreContext);
   const[temp , setTemp] = useState(false)
   let item={}
+  
   {localStorage.getItem('token') && cartitems.forEach(element => {
     if(element.name==name)
     {
@@ -16,13 +17,13 @@ const FoodItem = ({name,price,description,image}) => {
   return (
     <div onClick={()=>{setTemp(!temp)}} className='w-full m-auto rounded-2xl animate-fade shadow-md'>
        <div className='relative'>
-        <img src={image} className='w-full rounded-tl-[15px] rounded-tr-[15px]' alt="" />
+        <img src={`http://localhost:3000/images/${image}`} className='w-full rounded-tl-[15px] rounded-tr-[15px]' alt="" />
         {!item.num?
         <img className='w-[35px] absolute cursor-pointer bottom-[15px] right-[15px] rounded-[50%]' src={assets.add_icon_white} onClick={()=>addtocart(name,price)} alt="" /> :
         <div className="bottom-[15px] right-[15px] absolute flex items-center gap-[10px] p-[6px] rounded-[50px] bg-white">
           <img className='w-[30px]' onClick={()=>removefromcart(name)} src={assets.remove_icon_red} alt="" />
           <p className="">{item.num}</p>
-          <img className='w-[30px]' onClick={()=>{addtocart(name,price),getto}} src={assets.add_icon_green} alt="" />
+          <img className='w-[30px]' onClick={()=>{addtocart(name,price)}} src={assets.add_icon_green} alt="" />
         </div>
       }
        </div>

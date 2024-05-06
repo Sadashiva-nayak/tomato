@@ -7,14 +7,14 @@ const Cart = ({showAlert}) => {
   const navigate = useNavigate();
   useEffect(() => {
     getItems();
-  });
+  },[]);
   const [promo,setpromo]=useState("");
 
-  const onChange = (e)=>{
-    setpromo(e.target.value)
-}
+//   const onChange = (e)=>{
+//     setpromo(e.target.value)
+// }
   const handlesubmit = ()=>{
-    console.log("hi");
+
     if(promo=="Tomato")
     {
       showAlert("promo code applied","congratulations")
@@ -23,6 +23,7 @@ const Cart = ({showAlert}) => {
     {
       showAlert("Invalid promo code","sorry")
     }
+    setpromo(document.getElementById("code").value)
     document.getElementById("code").value="";
   }
 
@@ -58,7 +59,7 @@ const Cart = ({showAlert}) => {
               return (
                 <div>
                 <div className="grid grid-d items-center my-2 text-black text-[max(1vw,12px)]  ">
-                  <img src={image} alt="" className=" w-12" />
+                  <img src={`http://localhost:3000/images/${image}`} alt="" className=" w-12" />
                   <p>{item.name}</p>
                   <p>${item.price}</p>
                   <p>{item.num}</p>
@@ -83,7 +84,7 @@ const Cart = ({showAlert}) => {
             <hr className='my-2'/>
             <div className="flex justify-between text-[#555]">
               <p>Delivery Cost</p>
-              <p>${gettotalcartamount()===0 || promo=="Tomoto"?0:2}</p>
+              <p>${(gettotalcartamount()===0 || promo=="Tomoto")?0:2}</p>
             </div>
             <hr className='my-2'/>
             <div className="flex justify-between text-[#555]">
@@ -97,7 +98,7 @@ const Cart = ({showAlert}) => {
           <div >
             <p className="text-[#555]">If you have a promo code, enter here</p>
             <div className="mt-2 flex justify-between items-center bg-[#eaeaea] rounded">
-              <input onChange={onChange} id="code" className=' bg-transparent border-none outline-none pl-2' type="text" placeholder='promo code' />
+              <input id="code" className=' bg-transparent border-none outline-none pl-2' type="text" placeholder='promo code' />
               <button onClick={handlesubmit} className='w-[max(10vw,150px)] text-white border-none bg-black py-3 px-2 rounded'>Submit</button>
             </div>
           </div>

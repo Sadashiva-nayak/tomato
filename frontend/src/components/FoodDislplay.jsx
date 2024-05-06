@@ -1,9 +1,11 @@
-import React, { useContext  } from 'react'
+import React, { useContext } from 'react'
 import { StoreContext } from '../context/StoreContext'
 import FoodItem from './FoodItem'
 
 const FoodDislplay = ({category}) => {
-    const {food_list} = useContext(StoreContext)
+    
+  const {food_list} = useContext(StoreContext)
+
   return (
     <div className='mt-[25px]'>
       <h2 className="text-[max(2vw,24px)] font-[500]">Top DIshes Near You</h2>

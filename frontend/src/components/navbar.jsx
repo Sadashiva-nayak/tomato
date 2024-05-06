@@ -1,13 +1,14 @@
 import React, { useContext, useState } from 'react'
 import {assets} from '../assets/assets'
-import { Link } from 'react-router-dom' 
+import { Link, useNavigate } from 'react-router-dom' 
 import { StoreContext } from '../context/StoreContext';
 
 const navbar = ({curstate,setcurstate}) => {
 
     const {gettotalcartamount} = useContext(StoreContext);
     const [menu,setmenu] =useState('Menu');
-    
+    const navigate= useNavigate();
+
     const onClick = ()=>{
       if(curstate=="done")
       {
@@ -18,6 +19,11 @@ const navbar = ({curstate,setcurstate}) => {
         setcurstate("done");
       }
     }
+
+    const handleclick = ()=>{
+      navigate('/myorders');
+    }
+
   return (
     <div className='py-5 flex justify-between items-center'>
       <Link to='/'><img src={assets.logo} className=' w-[100px] lg:w-[140px]' alt="" /></Link>
@@ -33,6 +39,7 @@ const navbar = ({curstate,setcurstate}) => {
             <Link to='/cart'><img onClick={()=>setmenu("cart")} src={assets.bag_icon} alt="" /></Link>
             <div className={gettotalcartamount()==0?"":"absolute min-h-[10px] min-w-[10px] bg-[tomato] rounded-lg top-[-6px] right-[-6px] lg:top-[-8px] lg:right-[-8px]"}></div>
         </div>
+        <img src={assets.profile_icon} onClick={handleclick} className='cursor-pointer'/>
           {window.location.pathname=="/"?<button onClick={onClick} className=' px-4 py-3 lg:py-[10px] lg:px-[30px] cursor-pointer rounded-[50px] bg-transparent text-base text-[#49557e] border-solid border-[1px] border-[tomato] transition-all duration-300
          hover:bg-[#fff4f2] '>{localStorage.getItem('token')?"log out":"sign in"}</button>:""}
       </div>

@@ -8,6 +8,8 @@ import Footer from './components/Footer'
 import Login from './components/Login'
 import Alert from './components/Alert';
 import { motion , useInView ,useAnimation} from "framer-motion";
+import Verifying from './pages/Verifying'
+import Myorders from './pages/Myorders'
 
 const App = () => {
   const [curstate,setcurstate]=useState("sign up");
@@ -50,7 +52,9 @@ const App = () => {
     <Routes>
       <Route path='/' element={<Home curstate={curstate} setcurstate={setcurstate}/>} />
       <Route path='/cart' element={<Cart showAlert={showAlert}/>} />
-      <Route path='/order' element={<Placeorder showAlert={showAlert}/>} />
+      <Route path='/order' element={<Placeorder/>} />
+      <Route path='/verify' element={<Verifying/>} />
+      <Route path='/myorders' element={<Myorders/>} />
     </Routes>
     </div>
     <Footer/>
