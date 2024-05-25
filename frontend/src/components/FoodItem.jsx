@@ -17,7 +17,7 @@ const FoodItem = ({name,price,description,image}) => {
   return (
     <div onClick={()=>{setTemp(!temp)}} className='w-full m-auto rounded-2xl animate-fade shadow-md'>
        <div className='relative'>
-        <img src={`http://localhost:3000/images/${image}`} className='w-full rounded-tl-[15px] rounded-tr-[15px]' alt="" />
+        <img src={`https://tomato-3qr4.onrender.com/images/${image}`} className='w-full rounded-tl-[15px] rounded-tr-[15px]' alt="" />
         {!item.num?
         <img className='w-[35px] absolute cursor-pointer bottom-[15px] right-[15px] rounded-[50%]' src={assets.add_icon_white} onClick={()=>addtocart(name,price)} alt="" /> :
         <div className="bottom-[15px] right-[15px] absolute flex items-center gap-[10px] p-[6px] rounded-[50px] bg-white">

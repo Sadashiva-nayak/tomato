@@ -17,7 +17,7 @@ const Verifying = () => {
             success:success,
             orderId:orderId
         }
-    const res = await fetch(`http://localhost:3000/api/order/verify`, {
+    const res = await fetch(`https://tomato-3qr4.onrender.com/api/order/verify`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

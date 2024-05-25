@@ -83,6 +83,6 @@ export const menu_list = [
         menu_name: "Noodles",
         menu_image: menu_8
     }]
-    const food = await axios.get("http://localhost:3000/api/food/list");
+    const food = await axios.get("https://tomato-3qr4.onrender.com/api/food/list");
     export const food_list = food.data.data;
 
