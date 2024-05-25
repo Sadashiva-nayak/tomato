@@ -16,6 +16,6 @@ app.use('/api/items', require("./Routes/items"))
 app.use('/api/food', require('./Routes/FoodRoute'))
 app.use('/api/order', require('./Routes/orderRoute'))
 
-app.listen(port, () => {
+app.listen(port||3000, () => {
   console.log(`backend listening at http://localhost:${port}`)
 })
