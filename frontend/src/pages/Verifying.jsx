@@ -17,7 +17,7 @@ const Verifying = () => {
             success:success,
             orderId:orderId
         }
-    const res = await fetch(`https://tomato-3qr4.onrender.com/api/order/verify`, {
+    const res = await fetch(`https://tomato-backend-green.vercel.app/api/order/verify`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

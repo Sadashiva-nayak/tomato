@@ -31,7 +31,7 @@ const Placeorder = () => {
       amount:gettotalcartamount()+2
     }
 
-    const res = await fetch(`https://tomato-3qr4.onrender.com/api/order/place`, {
+    const res = await fetch(`https://tomato-backend-green.vercel.app/api/order/place`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

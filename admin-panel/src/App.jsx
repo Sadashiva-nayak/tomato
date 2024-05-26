@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
 
-  const url = "https://tomato-3qr4.onrender.com";
+  const url = "https://tomato-backend-green.vercel.app";
 
   return (
     <div className=''>

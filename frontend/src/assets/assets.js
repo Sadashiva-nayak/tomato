@@ -83,6 +83,6 @@ export const menu_list = [
         menu_name: "Noodles",
         menu_image: menu_8
     }]
-    const food = await axios.get("https://tomato-3qr4.onrender.com/api/food/list");
+    const food = await axios.get("https://tomato-backend-green.vercel.app/api/food/list");
     export const food_list = food.data.data;
 

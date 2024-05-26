@@ -6,7 +6,7 @@ const Myorders = () => {
     const [data,setdata]=useState([]);
     const token=localStorage.getItem('token');
     const fetchorders = async()=>{
-        const res = await fetch(`https://tomato-3qr4.onrender.com/api/order/userorders`, {
+        const res = await fetch(`https://tomato-backend-green.vercel.app/api/order/userorders`, {
       method: "POST",
       headers: {
         "auth-token": token,
