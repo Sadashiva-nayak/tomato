@@ -11,7 +11,7 @@ const Login = ({curstate,setcurstate,showAlert}) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if(curstate==='login'){
-        const response = await fetch("https://tomato-backend-green.vercel.app/api/auth/login", {
+        const response = await fetch(" http://localhost:3000/api/auth/login", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ const Login = ({curstate,setcurstate,showAlert}) => {
       }
       else{
             const {name , email ,password } =credentials;
-            const response = await fetch("https://tomato-backend-green.vercel.app/api/auth/createuser", {
+            const response = await fetch(" http://localhost:3000/api/auth/createuser", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

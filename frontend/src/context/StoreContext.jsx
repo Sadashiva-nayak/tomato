@@ -5,7 +5,7 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
   const [cartitems, setcartItems] = useState([]);
-  const host = "https://tomato-3qr4.onrender.com";
+  const host = "http://localhost:3000";
 
   const getItems = async () => {
 

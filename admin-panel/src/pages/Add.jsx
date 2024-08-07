@@ -10,7 +10,7 @@ function Add({url}) {
     name:"",
     description:"",
     price:"",
-    category:"salad"
+    category:"Salad"
   })
 
   const onchangehandler=(e)=>{
@@ -33,7 +33,7 @@ function Add({url}) {
          name:"",
          description:"",
          price:"",
-         category:"salad"
+         category:"Salad"
        })
        setimage(false);
        toast.success(response.data.message)

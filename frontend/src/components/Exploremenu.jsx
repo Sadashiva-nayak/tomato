@@ -10,7 +10,7 @@ const Exploremenu = ({category,setcategory}) => {
             {
                 menu_list.map((item,index)=>{
                     return(
-                        <div key={index} onClick={()=>{setcategory(prev=>prev===item.menu_name?'all':item.menu_name)}} className="">
+                        <div key={index} onClick={()=>{setcategory(prev=>prev==item.menu_name?'all':item.menu_name)}} className="">
                             <img src={item.menu_image} className={category===item.menu_name?'active1 menu-lst':"menu-lst"} alt="" />
                             <p className=" mt-[10] text-[#747474] cursor-pointer text-[max(1.4vw,16px)]">{item.menu_name}</p>
                         </div>
