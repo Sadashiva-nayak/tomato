@@ -1,6 +1,6 @@
 Login page
 
-<img width="1440" alt="Screenshot 2024-09-11 at 10 24 53 AM" src="https://github.com/user-attachments/assets/8ed86edf-50af-49ec-88a9-fef5e43c7ebd">
+![coconut logo 5](https://github.com/user-attachments/assets/9681b720-d0c4-4c3a-9875-72ef3b4fa5f1)
 
 Home page
 
