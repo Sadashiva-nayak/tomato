@@ -6,7 +6,7 @@ const Myorders = () => {
     const [data,setdata]=useState([]);
     const token=localStorage.getItem('token');
     const fetchorders = async()=>{
-        const res = await fetch(`http://localhost:3000/api/order/userorders`, {
+        const res = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/order/userorders`, {
       method: "POST",
       headers: {
         "auth-token": token,

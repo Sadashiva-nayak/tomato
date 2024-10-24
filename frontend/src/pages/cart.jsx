@@ -59,7 +59,7 @@ const Cart = ({showAlert}) => {
               return (
                 <div>
                 <div className="grid grid-d items-center my-2 text-black text-[max(1vw,12px)]  ">
-                  <img src={` http://localhost:3000/images/${image}`} alt="" className=" w-12" />
+                  <img src={`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/images/${image}`} alt="" className=" w-12" />
                   <p>{item.name}</p>
                   <p>${item.price}</p>
                   <p>{item.num}</p>

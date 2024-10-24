@@ -5,7 +5,7 @@ export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
   const [cartitems, setcartItems] = useState([]);
-  const host = "http://localhost:3000";
+  const host = `${import.meta.env.VITE_REACT_APP_BACKEND_URL}`;
 
   const getItems = async () => {
 
