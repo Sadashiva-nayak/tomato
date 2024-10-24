@@ -31,7 +31,7 @@ const Placeorder = () => {
       amount:gettotalcartamount()+2
     }
 
-    const res = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/order/place`, {
+    const res = await fetch(`http://localhost:3000/api/order/place`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

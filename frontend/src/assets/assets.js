@@ -83,6 +83,6 @@ export const menu_list = [
         menu_name: "Noodles",
         menu_image: menu_8
     }]
-    const food = await axios.get(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/food/list`);
+    const food = await axios.get("http://localhost:3000/api/food/list");
     export const food_list = food.data.data;
 

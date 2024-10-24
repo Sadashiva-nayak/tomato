@@ -17,7 +17,7 @@ const Verifying = () => {
             success:success,
             orderId:orderId
         }
-    const res = await fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/api/order/verify`, {
+    const res = await fetch(`http://localhost:3000/api/order/verify`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

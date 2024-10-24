@@ -5,6 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    target: 'es2022'  // Specify ES2022 or later to support top-level await
+    target: 'ES2022'  // Specify ES2022 or later to support top-level await
   }
 })

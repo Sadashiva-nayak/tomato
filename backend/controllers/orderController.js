@@ -1,8 +1,8 @@
 const orderModel = require("../models/orderModel")
 const Stripe =require("stripe")
 
-const stripe = new Stripe(`${import.meta.env.STRIPE_SECRET_KEY}`);
-const frontend_url=`${import.meta.env.FRONTEND_URL}`;
+const stripe = new Stripe("sk_test_51OzNYKSHv2TD9oBp4EevPml8YO3ISIDzliAm2oc1VWJmOm7hOOk2aDi0CXqJsvO3WrAVfbJ8AA9IfR7dfgqUBA6c00mV6ep7uE");
+const frontend_url="http://localhost:5174";
 
 const placeorder = async(req,res)=>{
 
